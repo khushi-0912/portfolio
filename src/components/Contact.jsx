@@ -40,7 +40,7 @@ function Contact() {
       <div className="max-w-2xl mx-auto">
         
         <p className={`text-xl ${colors.text} mb-8 text-center`}>
-          I'm currently looking for New Grad Software Engineer opportunities starting Summer 2025. 
+          I'm currently looking for New Grad Software Engineer opportunities starting Summer 2026. 
           Feel free to reach out!
         </p>
         
@@ -128,7 +128,7 @@ function Contact() {
           <div className="flex gap-6 justify-center">
             
             <a 
-              href="https://linkedin.com/in/khushi-talaviya"
+              href="https://www.linkedin.com/in/khushi-talaviya-0399b51b6"
               target="_blank"
               rel="noopener noreferrer"
               className={`${colors.text} hover:opacity-80 transition`}
