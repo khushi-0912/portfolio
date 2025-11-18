@@ -6,7 +6,7 @@ function Projects() {
     {
       title: "AI Price Estimator",
       description: "AI-powered valuation platform for luxury watches and jewelry using fine-tuned GPT-4o, achieving 90-95% accuracy with live market prices.",
-      tech: ["Java", "Spring Boot", "AngularJS", "OpenAI GPT-4o", "AWS EC2", "PostgreSQL"],
+      tech: ["Java", "Spring Boot", "AngularJS", "OpenAI GPT-4o", "AWS EC2", "Supabase", "AWS Amplify", "CI/CD Pipelines"],
       image: "/images/aiestimator.png",
       liveLink: "https://estimate.forty7.com/", // Add your link here
       githubLink: "" // Add your link here

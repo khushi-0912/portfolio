@@ -13,7 +13,7 @@ function Footer() {
           
           <div className="flex gap-6">
             <a 
-              href="https://linkedin.com/in/khushi-talaviya"
+              href="https://www.linkedin.com/in/khushi-talaviya-0399b51b6"
               target="_blank"
               rel="noopener noreferrer"
               className={`${colors.text} hover:opacity-80 transition`}
