@@ -11,8 +11,8 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <Skills />
       <Experience />
+      <Skills />
       <Contact />
     </>
   )
