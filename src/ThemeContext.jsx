@@ -20,13 +20,14 @@ export function ThemeProvider({ children }) {
 
   const colors = {
     light: {
-      bg: 'bg-[#FBF8F3]',           // cream background
-      text: 'text-[#4A3829]',        // brown text
-      accent: 'text-[#8B6F47]',      // lighter brown accent
-      accentBg: 'bg-[#8B6F47]',      // brown background for buttons
-      border: 'border-[#D4C5B9]',    // light brown border
-      card: 'bg-white',              // white cards
-      hover: 'hover:bg-[#F5EFE7]'    // subtle hover
+      bg: 'bg-white',                  // Pure white background
+      text: 'text-[#1a1f2e]',          // Dark navy text (same as dark mode bg)
+      accent: 'text-[#4b5563]',        // ← Dark gray
+      accentBg: 'bg-[#4b5563]',        // ← Dark gray
+      accentBgDark: 'bg-[#f3f4f6]',    // Light gray
+      border: 'border-[#e5e7eb]',      // Light gray border
+      card: 'bg-[#f9fafb]',            // Very light gray for cards
+      hover: 'hover:bg-[#f3f4f6]'      // Subtle hover
     },
     dark: {
     bg: 'bg-[#1a1f2e]',              // Dark navy blue (softer than black)

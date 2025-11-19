@@ -4,6 +4,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'  // Import the Contact component
 import Footer from './components/Footer'   // Import the Footer component
+import Experience from './components/Experience'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useTheme } from './ThemeContext.jsx'
 function HomePage() {
@@ -11,6 +12,7 @@ function HomePage() {
     <>
       <Hero />
       <Skills />
+      <Experience />
       <Contact />
     </>
   )

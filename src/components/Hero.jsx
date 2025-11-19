@@ -4,9 +4,9 @@ function Hero() {
   const { colors } = useTheme()
   
   return (
-    <section className="max-w-6xl mx-auto px-4 py-32">
+    <section className={`${colors.card} py-32`}>
       
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         
         {/* Main intro */}
         <div className="text-center mb-16">
@@ -14,8 +14,8 @@ function Hero() {
             Hi, I'm
           </p>
           
-          <h1 className={`text-6xl font-bold ${colors.text} mb-6`}>
-            Khushi Talaviya
+          <h1 className={`text-5xl font-bold ${colors.text} mb-5`}>
+            <span className="typing-animation">Khushi Talaviya</span>
           </h1>
           
           <h2 className={`text-3xl ${colors.text} mb-8`}>
@@ -51,10 +51,15 @@ function Hero() {
             <div className={`text-sm ${colors.text}`}>Graduation</div>
           </div>
           
-          <div className="text-center">
-            <div className={`text-3xl font-bold ${colors.accent} mb-2`}>80+</div>
-            <div className={`text-sm ${colors.text}`}>LeetCode Solved</div>
-          </div>
+          <a 
+  href="https://leetcode.com/u/Khushi_0912/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-center hover:scale-105 transition cursor-pointer"
+>
+  <div className={`text-3xl font-bold ${colors.accent} mb-2`}>80+</div>
+  <div className={`text-sm ${colors.text}`}>LeetCode Solved</div>
+</a>
           
           <div className="text-center">
             <div className={`text-3xl font-bold ${colors.accent} mb-2`}>3</div>

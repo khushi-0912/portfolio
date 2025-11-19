@@ -31,6 +31,12 @@ return (
           >
             Skills
           </button>
+          <button 
+            onClick={() => scrollToSection('experience')}
+            className={`${colors.text} ${colors.hover} transition`}
+          >
+            Experience
+          </button>
           <Link to="/projects" className={`${colors.text} ${colors.hover} transition`}>
             Projects
           </Link>

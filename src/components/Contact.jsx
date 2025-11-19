@@ -32,32 +32,70 @@ function Contact() {
   
     return (
     <section id="contact" className="max-w-6xl mx-auto px-4 py-20">
+  
+  <h2 className={`text-4xl font-bold ${colors.text} mb-12 text-center`}>
+    Get In Touch
+  </h2>
+  
+  <p className={`text-xl ${colors.text} mb-12 text-center`}>
+    I'm currently looking for New Grad Software Engineer opportunities starting Summer 2026.
+  </p>
+
+  {/* Two column layout */}
+  <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+    
+    {/* LEFT SIDE - Contact Info */}
+<div>
+  
+  {/* Email */}
+  <div className="mb-6">
+    <div className={`flex items-start gap-3`}>
+      <span className={`${colors.accent} font-medium min-w-[80px]`}>Email:</span>
+      <a 
+        href="mailto:khushitalaviya0912@gmail.com"
+        className={`${colors.text} hover:opacity-80 transition`}
+      >
+        khushitalaviya0912@gmail.com
+      </a>
+    </div>
+  </div>
+
+  {/* Location */}
+  <div className="mb-6">
+    <div className={`flex items-start gap-3`}>
+      <span className={`${colors.accent} font-medium min-w-[80px]`}>Location:</span>
+      <p className={`${colors.text}`}>
+        Jersey City, NJ
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+{/* MIDDLE - OR divider */}
+<div className="hidden md:flex absolute left-[45%] transform -translate-x-1/2 items-center justify-center">
+  <div className="w-12 h-12 flex items-center justify-center">
+    <span className={`${colors.text} font-bold text-xl`}>OR</span>
+  </div>
+</div>
+    {/* RIGHT SIDE - Form */}
+    <div>
       
-      <h2 className={`text-4xl font-bold ${colors.text} mb-12 text-center`}>
-        Get In Touch
-      </h2>
+      {status === 'success' && (
+        <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg">
+          ✓ Message sent successfully! I'll get back to you soon.
+        </div>
+      )}
       
-      <div className="max-w-2xl mx-auto">
+      {status === 'error' && (
+        <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
+          ✗ Something went wrong. Please try again or email me directly.
+        </div>
+      )}
+      
+      <form onSubmit={handleSubmit} className="space-y-4">
         
-        <p className={`text-xl ${colors.text} mb-8 text-center`}>
-          I'm currently looking for New Grad Software Engineer opportunities starting Summer 2026. 
-          Feel free to reach out!
-        </p>
-        
-        {status === 'success' && (
-          <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg">
-            ✓ Message sent successfully! I'll get back to you soon.
-          </div>
-        )}
-        
-        {status === 'error' && (
-          <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
-            ✗ Something went wrong. Please try again or email me directly.
-          </div>
-        )}
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
-          
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <label htmlFor="name" className={`block text-sm font-medium ${colors.text} mb-2`}>
               Name
@@ -82,75 +120,39 @@ function Contact() {
               name="email"
               required
               className={`w-full px-4 py-3 ${colors.border} border rounded-lg focus:ring-2 focus:ring-offset-0 ${colors.bg} ${colors.text}`}
-              placeholder="your.email@example.com"
+              placeholder="your@email.com"
             />
-          </div>
-          
-          <div>
-            <label htmlFor="subject" className={`block text-sm font-medium ${colors.text} mb-2`}>
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              className={`w-full px-4 py-3 ${colors.border} border rounded-lg focus:ring-2 focus:ring-offset-0 ${colors.bg} ${colors.text}`}
-              placeholder="What's this about?"
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="message" className={`block text-sm font-medium ${colors.text} mb-2`}>
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="5"
-              className={`w-full px-4 py-3 ${colors.border} border rounded-lg focus:ring-2 focus:ring-offset-0 resize-none ${colors.bg} ${colors.text}`}
-              placeholder="Your message..."
-            />
-          </div>
-          
-          <button
-            type="submit"
-            className={`w-full ${colors.accentBg} text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition`}
-          >
-            Send Message
-          </button>
-          
-        </form>
-        
-        <div className={`mt-12 pt-8 ${colors.border} border-t`}>
-          <p className={`text-center ${colors.text} mb-4`}>Or connect with me on:</p>
-          <div className="flex gap-6 justify-center">
-            
-            <a 
-              href="https://www.linkedin.com/in/khushi-talaviya-0399b51b6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${colors.text} hover:opacity-80 transition`}
-            >
-              💼 LinkedIn
-            </a>
-            
-            <a 
-              href="https://github.com/khushi-0912"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${colors.text} hover:opacity-80 transition`}
-            >
-              💻 GitHub
-            </a>
-            
           </div>
         </div>
         
-      </div>
+        <div>
+          <label htmlFor="message" className={`block text-sm font-medium ${colors.text} mb-2`}>
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="5"
+            className={`w-full px-4 py-3 ${colors.border} border rounded-lg focus:ring-2 focus:ring-offset-0 resize-none ${colors.bg} ${colors.text}`}
+            placeholder="Your message..."
+          />
+        </div>
+        
+        <button
+          type="submit"
+          className={`w-full ${colors.accentBg} text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition`}
+        >
+          Send Message
+        </button>
+        
+      </form>
       
-    </section>
+    </div>
+    
+  </div>
+  
+</section>
   )
 }
 
