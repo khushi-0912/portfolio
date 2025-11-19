@@ -45,7 +45,7 @@ function Hero() {
         </div>
         
         {/* Quick facts */}
-        <div className={`grid grid-cols-2 md:grid-cols-3 gap-6 ${colors.card} ${colors.border} border rounded-lg p-8`}>
+        <div className={`grid grid-cols-2 md:grid-cols-2 gap-6 ${colors.card} ${colors.border} border rounded-lg p-8`}>
           <div className="text-center">
             <div className={`text-3xl font-bold ${colors.accent} mb-2`}>May 2026</div>
             <div className={`text-sm ${colors.text}`}>Graduation</div>
@@ -61,10 +61,10 @@ function Hero() {
   <div className={`text-sm ${colors.text}`}>LeetCode Solved</div>
 </a>
           
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className={`text-3xl font-bold ${colors.accent} mb-2`}>3</div>
             <div className={`text-sm ${colors.text}`}>Projects Deployed</div>
-          </div>
+          </div> */}
           
         </div>
         
