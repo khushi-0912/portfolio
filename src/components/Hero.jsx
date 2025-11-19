@@ -41,11 +41,12 @@ function Hero() {
             >
               Contact Me
             </a>
+
           </div>
         </div>
         
         {/* Quick facts */}
-        <div className={`grid grid-cols-2 md:grid-cols-2 gap-6 ${colors.card} ${colors.border} border rounded-lg p-8`}>
+        <div className={`grid grid-cols-2 gap-6 ${colors.card} ${colors.border} border rounded-lg p-6 max-w-2xl mx-auto mb-8`}>
           <div className="text-center">
             <div className={`text-3xl font-bold ${colors.accent} mb-2`}>May 2026</div>
             <div className={`text-sm ${colors.text}`}>Graduation</div>
@@ -69,6 +70,21 @@ function Hero() {
         </div>
         
       </div>
+
+      <div className="flex justify-center ">
+              <a 
+                href="/resume.pdf"
+                download
+                className={`${colors.accentBg} text-white px-6 py-2.5 rounded-lg font-medium transition flex items-center gap-2`}
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Resume
+              </a>
+
+          </div>
+      
       
     </section>
   )
