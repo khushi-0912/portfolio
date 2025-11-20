@@ -52,7 +52,7 @@ function Skills() {
   ]
 
   return (
-    <section id="skills" className={`${colors.bg} py-20`}>
+    <section id="skills" className={`${colors.card} py-20`}>
       <div className="max-w-6xl mx-auto px-4">
         
         <h2 className={`text-4xl font-bold ${colors.text} mb-12 text-center`}>

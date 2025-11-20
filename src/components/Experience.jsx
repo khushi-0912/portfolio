@@ -45,7 +45,7 @@ function Experience() {
   const currentData = data[activeTab] || []
 
   return (
-    <section id="experience" className={`${colors.card} py-20`}>
+    <section id="experience" className={`${colors.bg} py-20`}>
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Header */}
